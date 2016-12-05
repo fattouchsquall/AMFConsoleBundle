@@ -6,6 +6,9 @@ This bundle provides a ReST interface for executing a symfony command. Features 
 - Running command without arguments.
 - Running command with arguments.
 
+[![build status](https://gitlab.ftven.net/socialtv/console-bundle/badges/master/build.svg)](https://gitlab.ftven.net/socialtv/console-bundle/commits/master)
+[![coverage report](https://gitlab.ftven.net/socialtv/console-bundle/badges/master/coverage.svg)](https://gitlab.ftven.net/socialtv/console-bundle/commits/master)
+
 Documentation
 -------------
 
