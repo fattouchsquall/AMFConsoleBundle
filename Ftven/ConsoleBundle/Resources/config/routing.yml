@@ -1,0 +1,3 @@
+ftven_console.application:
+    resource: "@FtvenConsoleBundle/Resources/config/routing/command.yml"
+    prefix:   /command
