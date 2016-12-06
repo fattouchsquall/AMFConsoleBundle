@@ -30,4 +30,12 @@ class AllowedCommand extends Constraint
     {
         return self::PROPERTY_CONSTRAINT;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function validatedBy()
+    {
+        return 'validator.allowed_command';
+    }
 }

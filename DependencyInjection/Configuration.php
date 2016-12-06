@@ -12,7 +12,6 @@ namespace AMF\ConsoleBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
-use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
 /**
  * Class Configuration.
@@ -30,11 +29,14 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
 
-        $this->addConsoleSection($treeBuilder->root('amf_console'));
+        $rootNode = $treeBuilder->root('amf_console');
+        $this->addConsoleSection($rootNode);
+
+        return $treeBuilder;
     }
 
     /**
-     * Adds the config of soap to global config.
+     * Adds the config of prefixes to global config.
      *
      * @param ArrayNodeDefinition $node The root element for the config nodes.
      *

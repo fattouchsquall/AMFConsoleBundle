@@ -30,7 +30,7 @@ class AllowedCommandValidator extends ConstraintValidator
      *
      * @param array $allowedPrefixes List of allowed prefixes.
      */
-    public function __construct(array $allowedPrefixes)
+    public function __construct(array $allowedPrefixes = [])
     {
         $this->allowedPrefixes = $allowedPrefixes;
     }
@@ -40,8 +40,8 @@ class AllowedCommandValidator extends ConstraintValidator
      */
     public function validate($property, Constraint $constraint)
     {
-        if (!$constraint instanceof ValidCommand) {
-            throw new UnexpectedTypeException($constraint, ValidCommand::class);
+        if (!$constraint instanceof AllowedCommand) {
+            throw new UnexpectedTypeException($constraint, AllowedCommand::class);
         }
 
         $commandParts = explode(':', $property);

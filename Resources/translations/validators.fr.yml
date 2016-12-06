@@ -1,0 +1,4 @@
+error:
+    command:
+        empty: "La défintion de la commande est obligatoire"
+        valid: "La définition de la commande n\'est pas autorisée"

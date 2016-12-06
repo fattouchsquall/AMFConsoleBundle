@@ -30,12 +30,11 @@ class CommandController extends Controller
      */
     public function runAction(Request $request)
     {
-        $form = $this->get('amf_console.console_application.form');
-
-        if (empty($output = $this->get('amf_console.console_application.form_handler')->process($request, new ConsoleApplication())) === false) {
-            return new JsonResponse(['output' => $output]);
+        $processed = $this->get('amf_console.console_application.form_handler')->process($request, new ConsoleApplication());
+        if ($processed['success'] === true) {
+            return new JsonResponse(['output' => $processed['output']]);
         }
 
-        return new JsonResponse(['errors' => $form->getErrors()], 400);
+        return new JsonResponse(['errors' => $processed['errors']], 400);
     }
 }

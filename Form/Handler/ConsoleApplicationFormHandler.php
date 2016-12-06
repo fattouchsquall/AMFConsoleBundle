@@ -18,6 +18,7 @@ use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpFoundation\ParameterBag;
+use Symfony\Component\Console\Exception\CommandNotFoundException;
 
 /**
  * Class BroadcastHandler.
@@ -59,7 +60,10 @@ class ConsoleApplicationFormHandler
      */
     public function process(Request $request, ConsoleApplication $consoleApplication)
     {
+        $success = false;
+        $message = '';
         $content = [];
+        $errors  = [];
 
         $parameters = json_decode($request->getContent(), true);
         if ($parameters == null) {
@@ -87,9 +91,14 @@ class ConsoleApplicationFormHandler
                 $application->run($input, $output);
 
                 $content[] = $output->fetch();
+                $success   = true;
             }
         }
 
-        return $content;
+        foreach ($this->form->getErrors(true) as $error) {
+            $errors[] = $error->getMessage();
+        }
+
+        return ['success' => $success, 'output' => $content, 'errors' => $errors];
     }
 }

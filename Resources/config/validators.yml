@@ -1,6 +1,0 @@
-services:
-    amf_console.valid_command.validator:
-        class: AMF\ConsoleBundle\Validator\Constraints\AllowedCommandValidator
-        arguments: ['%amf_console.allowed_prefixes%']
-        tags:
-            - { name: validator.constraint_validator }

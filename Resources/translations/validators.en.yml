@@ -1,0 +1,4 @@
+err:
+    command:
+        empty: "The command definition is required"
+        valid: "The command definition is not allowed"
