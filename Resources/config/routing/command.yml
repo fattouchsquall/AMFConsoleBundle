@@ -3,3 +3,4 @@ amf_console.command_run:
     defaults: { _controller: "AMFConsoleBundle:Command:run" }
     requirements: 
         { _method: POST }
+        

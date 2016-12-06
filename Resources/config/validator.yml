@@ -4,3 +4,4 @@ services:
         arguments: ['%amf_console.allowed_prefixes%']
         tags:
             - { name: validator.constraint_validator, alias: validator.allowed_command }
+            

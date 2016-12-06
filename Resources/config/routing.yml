@@ -1,3 +1,4 @@
 amf_console.application:
     resource: "@AMFConsoleBundle/Resources/config/routing/command.yml"
     prefix:   /command
+    

@@ -29,3 +29,4 @@ services:
     amf_console.console_application.form_handler:
         class: AMF\ConsoleBundle\Form\Handler\ConsoleApplicationFormHandler
         arguments: ["@amf_console.console_application.form", "@kernel"]
+        

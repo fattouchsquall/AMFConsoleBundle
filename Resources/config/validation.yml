@@ -8,3 +8,4 @@ AMF\ConsoleBundle\Form\Model\Command:
         definition:
             - NotBlank: { groups: ['ConsoleApplication'], message: 'error.command.empty' }
             - AMF\ConsoleBundle\Validator\Constraints\AllowedCommand: { message: 'error.command.valid', groups: ['ConsoleApplication'] }
+            

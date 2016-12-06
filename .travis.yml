@@ -20,3 +20,4 @@ after_script:
 
 notifications:
     email: amine.fattouch@gmail.com
+    
