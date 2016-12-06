@@ -18,7 +18,6 @@ use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpFoundation\ParameterBag;
-use Symfony\Component\Console\Exception\CommandNotFoundException;
 
 /**
  * Class BroadcastHandler.
@@ -61,12 +60,11 @@ class ConsoleApplicationFormHandler
     public function process(Request $request, ConsoleApplication $consoleApplication)
     {
         $success = false;
-        $message = '';
         $content = [];
         $errors  = [];
 
         $parameters = json_decode($request->getContent(), true);
-        if ($parameters == null) {
+        if ($parameters === null) {
             throw new BadRequestHttpException('Json Malformed !');
         }
 
