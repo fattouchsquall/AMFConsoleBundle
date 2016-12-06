@@ -43,7 +43,7 @@ First of all, you must add the following minimal configuration to your `config.y
 # app/config/config.yml
     
 amf_console:
-    command_prefixs: ['amf']
+    allowed_prefixs: ['amf']
 
 ```
 
@@ -62,4 +62,4 @@ POST http://my_host/command/run with this JSON:
 
 ```
 
-> ***Note*** if you want to execute an ordered commands , you must POST them with the order of execution.
+> ***Note*** if you want to execute an ordered commands , you must POST them in the order of execution.
