@@ -1,15 +1,15 @@
-Getting started with FtvenConsoleBundle
+Getting started with AMFConsoleBundle
 =======================================
 
 1) Installation
 ----------------------------------
 
 
-The first step is to tell composer that you want to download FtvenConsoleBundle which can
+The first step is to tell composer that you want to download AMFConsoleBundle which can
 be achieved by entering the following line at the command prompt:
 
 ```bash
-    $ php composer.phar require ftven/console-bundle: dev-develop
+    $ php composer.phar require amf/console-bundle: dev-develop
 ```
 
 > ***Note*** This command requires you to have Composer installed globally, as explained
@@ -25,7 +25,41 @@ public function registerBundles()
 {
     return array(
         // ...
-        new Ftven\ConsoleBundle\FtvenConsoleBundle(),
+        new AMF\ConsoleBundle\AMFConsoleBundle(),
     );
 }
 ```
+
+2) Configuration
+-------------------------------
+
+Now that you have properly installed the bundle, the next step is to configure it to work with the specific needs of your application.
+
+> ***Note*** This conf can change between environments (production, development, release...). 
+
+First of all, you must add the following minimal configuration to your `config.yml` file:
+
+```yaml
+# app/config/config.yml
+    
+amf_console:
+    command_prefixs: ['amf']
+
+```
+
+3) Usage
+--------
+
+After that you can run your prefixed commands over a POST to a ReST url as this example: 
+
+POST http://my_host/command/run with this JSON:
+
+```json
+
+{
+"commands": [{"definition": "amf:readme", "arguments": [{"name": "--env", "value": "dev"}]}]
+}
+
+```
+
+> ***Note*** if you want to execute an ordered commands , you must POST them with the order of execution.

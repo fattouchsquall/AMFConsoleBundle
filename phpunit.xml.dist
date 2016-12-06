@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true" bootstrap="./Tests/bootstrap.php">
     <testsuites>
-        <testsuite name="FtvenConsoleBundle Test Suite">
+        <testsuite name="AMFConsoleBundle Test Suite">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>

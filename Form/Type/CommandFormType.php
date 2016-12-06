@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of the FtvenConsoleBundle.
+ * This file is part of the AMFConsoleBundle.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Ftven\ConsoleBundle\Form\Type;
+namespace AMF\ConsoleBundle\Form\Type;
 
-use Ftven\ConsoleBundle\Form\Model\Command;
+use AMF\ConsoleBundle\Form\Model\Command;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -19,7 +19,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 /**
  * Form type for command.
  *
- * @author Amine Fattouch <amine.fattouch@francetv.fr>
+ * @author Amine Fattouch <amine.fattouch@gmail.com>
  */
 class CommandFormType extends AbstractType
 {

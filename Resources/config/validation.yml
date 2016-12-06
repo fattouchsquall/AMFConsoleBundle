@@ -1,0 +1,10 @@
+AMF\ConsoleBundle\Form\Model\ConsoleApplication:
+    properties:
+        commands:
+            valid: ~
+            
+AMF\ConsoleBundle\Form\Model\Command:
+    properties:
+        definition:
+            - NotBlank: { groups: ['ConsoleApplication'], message: 'error.field.empty' }
+            - AMF\ConsoleBundle\Validator\Constraints\ValidCommand: { message: 'error.command.valid', groups: ['ConsoleApplication'] }

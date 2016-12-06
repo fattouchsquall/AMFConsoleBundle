@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ftven\ConsoleBundle\DependencyInjection;
+namespace AMF\ConsoleBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -15,11 +15,11 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
 /**
- * Class FtvenShellExtension.
+ * Class AMFConsoleExtension.
  *
  * @author Amine Fattouch <amine.fattouch@francetv.fr>
  */
-class FtvenConsoleExtension extends Extension
+class AMFConsoleExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -28,5 +28,8 @@ class FtvenConsoleExtension extends Extension
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('form/console_application.yml');
+        $loader->load('validators.yml');
+
+        $container->setParameter('amf_console.allowed_prefixes', $config['allowed_prefixes']);
     }
 }

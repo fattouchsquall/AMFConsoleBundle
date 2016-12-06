@@ -1,5 +1,0 @@
-ftven_console.command_run:
-    pattern:  /run
-    defaults: { _controller: "FtvenConsoleBundle:Command:run" }
-    requirements: 
-        { _method: POST }

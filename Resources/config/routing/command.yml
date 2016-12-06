@@ -1,5 +1,5 @@
-ftven_console.command_run:
+amf_console.command_run:
     pattern:  /run
-    defaults: { _controller: "FtvenConsoleBundle:Command:run" }
+    defaults: { _controller: "AMFConsoleBundle:Command:run" }
     requirements: 
         { _method: POST }

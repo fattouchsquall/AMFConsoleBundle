@@ -1,37 +1,39 @@
 {
-    "name": "ftven/console-bundle",
+    "name": "amf/console-bundle",
     "description": "A bundle for executing a console application",
     "type": "symfony-bundle",
     "keywords": ["command", "shell", "console"],
-    "homepage": "https://gitlab.ftven.net/socialtv",
+    "homepage": "https://github.com/fattouchsquall",
     "license": "MIT",
     "authors": [
         {
             "name": "Amine Fattouch",
-            "email": "amine.fattouch.ext@francetv.fr",
+            "email": "amine.fattouch@gmail.com",
             "role": "Lead Developer"
         },
         {
             "name": "Michael Coulleret",
-            "email": "michael.coulleret.ext@francetv.fr",
+            "email": "michael.coulleret@gmail.com",
             "role": "Developer"
         },
         {
             "name": "Florent Despierres",
-            "email": "florent.despierres.ext@francetv.fr",
+            "email": "florent.despierres@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.3.2",
         "symfony/framework-bundle": "~2.8",
-        "symfony/console": "~2.8"
+        "symfony/console": "~2.8",
+        "symfony/form": "~2.8",
+        "symfony/validator": "2.8"
     },
    "require-dev": {
        "phake/phake": "@stable"
     },
     "autoload": {
-        "psr-4" : { "Ftven\\ConsoleBundle\\" : "" }
+        "psr-4" : { "AMF\\ConsoleBundle\\" : "" }
     },
     "minimum-stability": "dev",
     "extra": {

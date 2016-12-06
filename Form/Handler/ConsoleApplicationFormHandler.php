@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of the FtvenConsoleBundle.
+ * This file is part of the AMFConsoleBundle.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Ftven\ConsoleBundle\Form\Handler;
+namespace AMF\ConsoleBundle\Form\Handler;
 
-use Ftven\ConsoleBundle\Form\Model\ConsoleApplication;
+use AMF\ConsoleBundle\Form\Model\ConsoleApplication;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\ParameterBag;
  * Class BroadcastHandler.
  *
  * @author Michael COULLERET <michael.coulleret@francetv.com>
- * @author Amine Fattouch <amine.fattouch@francetv.fr>
+ * @author Amine Fattouch <amine.fattouch@gmail.com>
  */
 class ConsoleApplicationFormHandler
 {

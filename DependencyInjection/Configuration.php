@@ -7,25 +7,48 @@
  * file that was distributed with this source code.
  */
 
-namespace Ftven\ConsoleBundle\DependencyInjection;
+namespace AMF\ConsoleBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
 /**
  * Class Configuration.
  *
- * @author Amine Fattouch <amine.fattouch@francetv.fr>
+ * @author Amine Fattouch <amine.fattouch@gmail.com>
  */
 class Configuration implements ConfigurationInterface
 {
     /**
      * Generates the configuration tree builder.
      *
-     * @return \Symfony\Component\Config\Definition\Builder\TreeBuilder The tree builder
+     * @return TreeBuilder The tree builder
      */
     public function getConfigTreeBuilder()
     {
-        return new TreeBuilder();
+        $treeBuilder = new TreeBuilder();
+
+        $this->addConsoleSection($treeBuilder->root('amf_console'));
+    }
+
+    /**
+     * Adds the config of soap to global config.
+     *
+     * @param ArrayNodeDefinition $node The root element for the config nodes.
+     *
+     * @return void
+     */
+    protected function addConsoleSection(ArrayNodeDefinition $node)
+    {
+        $node->fixXmlConfig('allowed_prefix')
+            ->children()
+                ->arrayNode('allowed_prefixes')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                    ->prototype('scalar')->end()
+                ->end()
+            ->end();
     }
 }

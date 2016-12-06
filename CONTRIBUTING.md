@@ -1,14 +1,9 @@
-Getting started with FtvenConsoleBundle
+Getting started with AMFConsoleBundle
 =======================================
 
 Maintainer & Contributing
 ----------------------------------
 
-- Amine FATTOUCH <<fattouh.amine@francetv.fr>>
-- Michael COULLERET <<michael.coulleret@francetv.fr>>
-- Florent DESPIERRES <<florent.despierres@francetv.fr>>
-
-Hipchat
-----------------------------------
-
-Channel #SocialTV
+- Amine FATTOUCH <<fattouh.amine@gmail.com>>
+- Michael COULLERET <<michael.coulleret@gmail.com>>
+- Florent DESPIERRES <<florent.despierres@gmail.com>>
