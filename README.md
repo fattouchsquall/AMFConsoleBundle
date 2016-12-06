@@ -11,10 +11,10 @@ Features available include:
 [![Build Status](https://travis-ci.org/fattouchsquall/AMFConsoleBundle.svg?branch=master)](https://travis-ci.org/fattouchsquall/AMFConsoleBundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fattouchsquall/AMFConsoleBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fattouchsquall/AMFConsoleBundle/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/fattouchsquall/AMFConsoleBundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fattouchsquall/AMFConsoleBundle/?branch=master)
-[![Total Downloads](https://poser.pugx.org/amf/webservices-client-bundle/downloads)](https://packagist.org/packages/amf/webservices-client-bundle)
-[![Latest Stable Version](https://poser.pugx.org/amf/webservices-client-bundle/v/stable)](https://packagist.org/packages/amf/webservices-client-bundle)
-[![License](https://poser.pugx.org/amf/webservices-client-bundle/license)](https://packagist.org/packages/amf/webservices-client-bundle)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/9336a70e-5c76-455d-8b4a-54e47cc7a174/mini.png)](https://insight.sensiolabs.com/projects/9336a70e-5c76-455d-8b4a-54e47cc7a174)
+[![Total Downloads](https://poser.pugx.org/amf/console-bundle/downloads)](https://packagist.org/packages/amf/console-bundle)
+[![Latest Stable Version](https://poser.pugx.org/amf/console-bundle/v/stable)](https://packagist.org/packages/amf/console-bundle)
+[![License](https://poser.pugx.org/amf/console-bundle/license)](https://packagist.org/packages/amf/console-bundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/46f19ce6-8f89-4fe6-a3b0-8adf4e62903f/mini.png)](https://insight.sensiolabs.com/projects/46f19ce6-8f89-4fe6-a3b0-8adf4e62903f)
 
 Documentation
 -------------
