@@ -20,9 +20,8 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 /**
- * Class BroadcastHandler.
+ * Class ConsoleApplicationFormHandler.
  *
- * @author Michael COULLERET <michael.coulleret@francetv.com>
  * @author Amine Fattouch <amine.fattouch@gmail.com>
  */
 class ConsoleApplicationFormHandler

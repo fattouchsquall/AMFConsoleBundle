@@ -9,8 +9,6 @@
 
 namespace AMF\ConsoleBundle\Form\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 /**
  * Model class for console application
  *
@@ -19,17 +17,9 @@ use Doctrine\Common\Collections\ArrayCollection;
 class ConsoleApplication
 {
     /**
-     * @var ArrayCollection
+     * @var array
      */
-    private $commands;
-
-    /**
-     * Constructor class.
-     */
-    public function __construct()
-    {
-        $this->commands = new ArrayCollection();
-    }
+    private $commands = [];
 
     /**
      * Getter for association commands.
@@ -44,11 +34,11 @@ class ConsoleApplication
     /**
      * Setter for association commands.
      *
-     * @param ArrayCollection $commands
+     * @param array $commands
      *
      * @return self
      */
-    public function setCommands(ArrayCollection $commands)
+    public function setCommands($commands = [])
     {
         $this->commands = $commands;
 
@@ -64,25 +54,7 @@ class ConsoleApplication
      */
     public function addCommand(Command $command)
     {
-        if ($this->commands->contains($command) === false) {
-            $this->commands->add($command);
-        }
-
-        return $this;
-    }
-
-    /**
-     * Removes an command if it does exist from the association of commands.
-     *
-     * @param Command $command
-     *
-     * @return self
-     */
-    public function removeCommand(Command $command)
-    {
-        if ($this->commands->contains($command)) {
-            $this->commands->removeElement($command);
-        }
+        $this->commands[] = $command;
 
         return $this;
     }

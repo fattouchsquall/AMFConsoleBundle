@@ -47,6 +47,17 @@ amf_console:
 
 ```
 
+Then, import routing file into `routing.yml` file:
+
+```yaml
+# app/config/routing.yml
+    
+amf_console:
+    resource: "@AMFConsoleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+```
+
 3) Usage
 --------
 

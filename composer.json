@@ -30,7 +30,8 @@
         "symfony/validator": "2.8"
     },
    "require-dev": {
-       "phake/phake": "@stable"
+       "phake/phake": "@stable",
+       "phpunit/phpunit": "^5.3"
     },
     "autoload": {
         "psr-4" : { "AMF\\ConsoleBundle\\" : "" }

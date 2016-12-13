@@ -9,8 +9,6 @@
 
 namespace AMF\ConsoleBundle\Form\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 /**
  * Model class for command
  *
@@ -24,17 +22,9 @@ class Command
     private $definition;
 
     /**
-     * @var ArrayCollection
+     * @var array
      */
-    private $arguments;
-
-    /**
-     * Constructor class.
-     */
-    public function __construct()
-    {
-        $this->arguments = new ArrayCollection();
-    }
+    private $arguments = [];
 
     /**
      * Getter for field definition.
@@ -73,11 +63,11 @@ class Command
     /**
      * Setter for association arguments.
      *
-     * @param ArrayCollection $arguments
+     * @param array $arguments
      *
      * @return self
      */
-    public function setArguments(ArrayCollection $arguments = null)
+    public function setArguments(array $arguments = [])
     {
         $this->arguments = $arguments;
 
@@ -93,25 +83,7 @@ class Command
      */
     public function addArgument(Argument $argument = null)
     {
-        if ($this->arguments->contains($argument) === false) {
-            $this->arguments->add($argument);
-        }
-
-        return $this;
-    }
-
-    /**
-     * Removes an argument if it does exist from the association of arguments.
-     *
-     * @param Argument $argument
-     *
-     * @return self
-     */
-    public function removeArgument(Argument $argument)
-    {
-        if ($this->arguments->contains($argument)) {
-            $this->arguments->removeElement($argument);
-        }
+        $this->arguments[] = $argument;
 
         return $this;
     }
