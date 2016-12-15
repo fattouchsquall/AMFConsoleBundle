@@ -10,16 +10,6 @@
             "name": "Amine Fattouch",
             "email": "amine.fattouch@gmail.com",
             "role": "Lead Developer"
-        },
-        {
-            "name": "Michael Coulleret",
-            "email": "michael.coulleret@gmail.com",
-            "role": "Developer"
-        },
-        {
-            "name": "Florent Despierres",
-            "email": "florent.despierres@gmail.com",
-            "role": "Developer"
         }
     ],
     "require": {
